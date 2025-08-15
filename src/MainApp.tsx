@@ -45,21 +45,35 @@ function MainApp() {
                 <ControlPanel appState={appState}></ControlPanel>
             </div>
             <LayoutToUse>
-                <div className={"container-fluid"} id={"anigraph-app-div"}>
-                    <div className={"row anigraph-row"}>
-                        <div className={`col-${appState.getState("CanvasColumnSize")??10} anigraph-component-container`}>
-                            <MainComponent renderWindow={appState.mainRenderWindow} name={appState.sceneModel.name}>
+                <div className="container-fluid" id="anigraph-app-div">
+                    {/* flex row that NEVER wraps */}
+                    <div className="row g-3 flex-nowrap align-items-start">
+
+                        {/* Main scene: fixed 9/12 */}
+                        <div className="col-9 anigraph-component-container">
+                            <MainComponent
+                                renderWindow={appState.mainRenderWindow}
+                                name={appState.sceneModel.name}
+                            >
                                 <GUIComponent appState={appState}>
-                                    <AppComponentClass model={sceneModel}></AppComponentClass>
+                                    <AppComponentClass model={sceneModel}/>
                                 </GUIComponent>
                             </MainComponent>
                         </div>
-                    </div>
-                    <div className={"row"}>
-                        <div className={`col-${appState.getState("CanvasColumnSize")??10} anigraph-component-container`}>
-                            <GUIBottomComponent appState={appState}>
-                            </GUIBottomComponent>
+
+                        {/* Keyboard: fixed 3/12 */}
+                        <div
+                            className="col-3 d-flex justify-content-center align-items-start"
+                            style={{marginTop: "250px"}}  // tweak px value
+                        >
+                            <img
+                                src={process.env.PUBLIC_URL + "/images/keyboard.png"}
+                                alt="Keyboard Controls"
+                                style={{ width: "400px", height: "auto" }}   // 👈 stays 300px wide
+
+                            />
                         </div>
+
                     </div>
                 </div>
             </LayoutToUse>
