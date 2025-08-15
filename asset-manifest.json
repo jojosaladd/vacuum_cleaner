@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/vacuum_cleaner/static/css/main.8a914cdf.css",
-    "main.js": "/vacuum_cleaner/static/js/main.374f9b8e.js",
+    "main.js": "/vacuum_cleaner/static/js/main.bf2843a3.js",
     "static/media/anonymous-pro-all-400-normal.woff": "/vacuum_cleaner/static/media/anonymous-pro-all-400-normal.9ec8c557cfc53f1bd37f.woff",
     "static/media/anonymous-pro-latin-400-normal.woff2": "/vacuum_cleaner/static/media/anonymous-pro-latin-400-normal.36b577a8f4540e027d63.woff2",
     "static/media/anonymous-pro-latin-ext-400-normal.woff2": "/vacuum_cleaner/static/media/anonymous-pro-latin-ext-400-normal.274e09d4b33de97a29c8.woff2",
@@ -11,6 +11,6 @@
   },
   "entrypoints": [
     "static/css/main.8a914cdf.css",
-    "static/js/main.374f9b8e.js"
+    "static/js/main.bf2843a3.js"
   ]
 }
